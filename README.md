@@ -34,6 +34,12 @@ Next, run the application locally:
 npm run dev
 ```
 
+The web application can be asssessed at the following address:
+
+```
+http://localhost:3030
+```
+
 ## Deployment
 
 I have deployed this app using heroku. It can be asssessed via:
