@@ -7,12 +7,12 @@ import CartTable from "../../components/CartTable";
 import AddProductForm from "../../components/AddProductForm";
 
 const CenterContainer = () => {
-  const [showCartButton, setShowCartButton] = React.useState(true);
+  const [showCartButton] = React.useState(true);
   const [showCartList, setShowCartList] = React.useState(false);
   const [showProductList, setShowProductList] = React.useState(false);
   const [showAddProduct, setShowAddProduct] = React.useState(false);
   const [open, setOpen] = React.useState(false);
-  const [showSuccessMessage, setShowSuccessMessage] = React.useState(false);
+  const [, setShowSuccessMessage] = React.useState(false);
 
   const handleClickOpen = () => {
     setShowSuccessMessage(false);

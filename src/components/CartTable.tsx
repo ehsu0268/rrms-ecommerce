@@ -21,7 +21,7 @@ import Row from "./CartRowProps";
 const CartTable = () => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
-  const { dataCRUD, fetchData, error, isLoading } = useCrud<Cart>([], "carts");
+  const { dataCRUD, fetchData } = useCrud<Cart>([], "carts");
   const { users, fetchUserData } = userCrud<User>([], "users");
   const { products, fetchProductData } = productCrud<Product>([], "products");
 
@@ -61,11 +61,11 @@ const CartTable = () => {
     return filteredProducts;
   }
 
-  const emptyRows =
-    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - dataCRUD.length) : 0;
+  // const emptyRows =
+  //   page > 0 ? Math.max(0, (1 + page) * rowsPerPage - dataCRUD.length) : 0;
 
   const handleChangePage = (
-    event: React.MouseEvent<HTMLButtonElement> | null,
+    _event: React.MouseEvent<HTMLButtonElement> | null,
     newPage: number
   ) => {
     setPage(newPage);

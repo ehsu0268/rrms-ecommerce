@@ -22,10 +22,7 @@ import useCrud from "../hooks/useCrud";
 const ProductTable = () => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
-  const { dataCRUD, fetchData, error, isLoading } = useCrud<Product>(
-    [],
-    "products"
-  );
+  const { dataCRUD, fetchData } = useCrud<Product>([], "products");
 
   useEffect(() => {
     fetchData();
